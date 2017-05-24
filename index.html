@@ -17,7 +17,7 @@
     <script>
         $(document).ready(function () {
             fetchDropDownData();
-            button_click();
+            // button_click();
         });
         function fetchDropDownData() {
             var dropdownData = ['鍾佳陞', '李威翰', '陳泓仲'];
@@ -25,13 +25,16 @@
                 $('.dropdown-menu').append(' <li><a href="#">' + dropdownData[s] + '</a></li>');
             }
         }
-        function button_click(){
-        $(".btn").click(function (e) { 
-            e.preventDefault();
-            alert($(this).text());
+        // function button_click(){
+        // $(".btn").click(function (e) { 
+        //     alert($(this).text());
+        // });
+        // }
+   
+        $(document).on("click",".btn", function () {
+             alert($(this).text());
         });
-        }
-    </script>
+        </script>
 </head>
 
 <body>
